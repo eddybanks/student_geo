@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <%= render 'layouts/nav' %>
+    <% if @page_header.present? %>
+      <%= render 'layouts/header' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
