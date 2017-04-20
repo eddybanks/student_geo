@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :high_schools
   root              'home#index'
 
   resources :students

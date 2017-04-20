@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  act_code: MyString
+  street_line1: MyString
+  street_line2: MyString
+  street_line3: MyString
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  name: MyString
+  act_code: MyString
+  street_line1: MyString
+  street_line2: MyString
+  street_line3: MyString
+  latitude: 1.5
+  longitude: 1.5

@@ -1,0 +1,17 @@
+<%= simple_form_for(@high_school) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :act_code %>
+    <%= f.input :street_line1 %>
+    <%= f.input :street_line2 %>
+    <%= f.input :street_line3 %>
+    <%= f.input :latitude %>
+    <%= f.input :longitude %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @high_school.name %>
+</p>
+
+<p>
+  <strong>Act code:</strong>
+  <%= @high_school.act_code %>
+</p>
+
+<p>
+  <strong>Street line1:</strong>
+  <%= @high_school.street_line1 %>
+</p>
+
+<p>
+  <strong>Street line2:</strong>
+  <%= @high_school.street_line2 %>
+</p>
+
+<p>
+  <strong>Street line3:</strong>
+  <%= @high_school.street_line3 %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @high_school.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @high_school.longitude %>
+</p>
+
+<%= link_to 'Edit', edit_high_school_path(@high_school) %> |
+<%= link_to 'Back', high_schools_path %>
