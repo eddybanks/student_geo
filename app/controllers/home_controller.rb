@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
 
-    @page_header = "Homepage"
+    @page_header = "Overview"
 
   end
 end

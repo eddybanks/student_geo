@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170420204105) do
+ActiveRecord::Schema.define(version: 20170423214959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ethnicities", force: :cascade do |t|
+    t.string   "ipeds_value"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "high_schools", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +32,18 @@ ActiveRecord::Schema.define(version: 20170420204105) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.float    "distance_to_unm"
+  end
+
+  create_table "maps", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "nationalities", force: :cascade do |t|
+    t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "regions", force: :cascade do |t|

@@ -8,11 +8,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= render 'layouts/nav' %>
-    <% if @page_header.present? %>
-      <%= render 'layouts/header' %>
-    <% end %>
-    <%= yield %>
+  <body class="outer-wrapper container-fluid">
+    <%#= render 'layouts/site_header' %>
+    <div class="row">
+      <%= render 'layouts/nav' %>
+      <div class="inner-wrapper col-sm-10">
+        <% if @page_header.present? %>
+          <%= render 'layouts/header' %>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

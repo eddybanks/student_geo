@@ -22,6 +22,7 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem "react-rails"
 gem "d3-rails"
+gem 'webpacker', github: 'rails/webpacker'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end

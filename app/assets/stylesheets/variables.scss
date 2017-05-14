@@ -1,0 +1,72 @@
+// fonts
+
+$roboto: 'Roboto', sans-serif;
+$droid: 'Droid Sans', sans-serif;
+$oxygen: 'Oxygen', sans-serif;
+$catamaran: 'Catamaran', sans-serif;
+$fira_sans: 'Fira Sans', sans-serif;
+$abel: 'Abel', sans-serif;
+
+// colors
+
+$black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
+$yankees_blue: rgba(37, 40, 61, 1);
+$gainsboro: rgba(220, 220, 221, 1);
+$timberwolf: rgba(219, 212, 211, 1);
+$ghost_white: rgba(251, 251, 255, 1);
+
+// mixins
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin fcolor($color: $black) {
+  color: $color;
+}
+
+@mixin colors($bgcolor: rgba($black, 0.3), $color: $white) {
+  background-color: $bgcolor;
+  @include fcolor($color);
+}
+
+@mixin font($font-family: inherit, $font-size: 1em, $font-style: normal, $text-decoration: none, $text-shadow: none) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  text-decoration: $text-decoration;
+  text-shadow: $text-shadow;
+}
+
+@mixin link($font-family: $fira_sans, $font-size: 1.1em, $font-color: $black, $font-color-hv: $white, $bgcolor: rgba($grey, 0.2), $font-size-lg: 1.2em) {
+  a {
+    @include font($font-family, $font-size);
+    text-decoration: none;
+  }
+  a:link, a:visited {
+    @extend a;
+    @include fcolor($font-color);
+  }
+  a:hover, a:active {
+    @extend a;
+    @include fcolor(darken($font-color-hv, 20%));
+  }
+}
+
+@mixin box($margin: 0%, $padding: 0%, $min-height: 30%, $width: 100%, $border-radius: 0px) {
+  margin: $margin;
+  padding: $padding;
+  min-height: $min-height;
+  width: $width;
+  @include border-radius($border-radius);
+}
+
+@mixin col($width: inherit, $over-y: auto, $over-x: auto) {
+  width: $width;
+  overflow-y: $over-y;
+  overflow-x: $over-x;
+}

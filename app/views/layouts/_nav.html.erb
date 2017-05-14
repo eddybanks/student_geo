@@ -1,28 +1,13 @@
-<nav class="navbar navbar-toggleable-md navbar-light">
-  <button class="navbar-toggler navbar-toggler-right" type="button" name="button"
-    data-toggle="collapse" data-target="#main-nav-content"
-    aria-controls="main-nav-content" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <%= link_to 'Student Geo', root_path, class: 'navbar-brand' %>
-
-  <div class="collapse navbar-collapse" id="main-nav-content">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <%= link_to 'Summary Tables', '#', class: 'nav-link dropdown-toggle', id: 'summary-dropdown',
-        data: { toggle: 'dropdown'}, aria: { haspopup: 'true', expanded: 'false' } %>
-        <div class="dropdown-menu" aria-labelledby="summary-dropdown">
-          <%= link_to 'Students', students_path, class: 'dropdown-item' %>
-          <%= link_to 'High Schools', high_schools_path, class: 'dropdown-item' %>
-        </div>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Map', '#', class: 'nav-link' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'GraphiQL', '#', class: 'nav-link' %>
-      </li>
-    </ul>
-  </div>
-
+<nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded side-nav">
+  <ul class="nav flex-column nav-inverse">
+    <li class="nav-item">
+      <%= link_to "Overview", '#', class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "In-state", maps_path, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Out-of-state", root_path, class: 'nav-link' %>
+    </li>
+  </ul>
 </nav>
